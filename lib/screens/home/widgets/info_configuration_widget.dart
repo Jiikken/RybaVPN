@@ -1,18 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:trying_flutter/constants/constants.dart';
 
 class InfoConfigurationWidget extends StatelessWidget {
-  const InfoConfigurationWidget({
-    super.key,
-  });
+  const InfoConfigurationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: const Color(0xff121212),
-        borderRadius: BorderRadius.circular(15)
+        borderRadius: BorderRadius.circular(15),
       ),
       width: double.infinity,
       height: 155,
@@ -23,10 +22,7 @@ class InfoConfigurationWidget extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 6, top: 10),
             child: Text(
               "Конфигурации:",
-              style: TextStyle(
-                fontFamily: "Rubik-Light",
-                fontSize: 18
-              ),
+              style: TextStyle(fontFamily: "Rubik-Light", fontSize: 18),
             ),
           ),
           Container(
@@ -44,10 +40,7 @@ class InfoConfigurationWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: greyBackgroundStartButton,
-                    border: Border.all(
-                      color: greyBackgroundButton,
-                      width: 1
-                    )
+                    border: Border.all(color: greyBackgroundButton, width: 1),
                   ),
                   width: 337,
                   height: 41,
@@ -55,7 +48,30 @@ class InfoConfigurationWidget extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          print("ПРИВЕТ!!!!");
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return CupertinoTheme(
+                                data: CupertinoThemeData(
+                                  barBackgroundColor: greyBackgroundSection
+                                ),
+                                child: CupertinoAlertDialog(
+                                  title: Text("Add configuration"),
+                                  content: Column(
+                                    children: [
+                                      Text("data1"),
+                                      Text("data2"),
+                                    ],
+                                  ),
+                                  actions: [
+                                    TextButton(onPressed:() {
+                                      
+                                    }, child: Text("Cancel"))
+                                  ],
+                                ),
+                              );
+                            },
+                          );
                         },
                         child: Container(
                           margin: EdgeInsets.only(left: 7, right: 16),
@@ -64,8 +80,8 @@ class InfoConfigurationWidget extends StatelessWidget {
                             shape: BoxShape.circle,
                             border: Border.all(
                               color: greyBackgroundButton,
-                              width: 1
-                            )
+                              width: 1,
+                            ),
                           ),
                           height: 31,
                           width: 31,
@@ -82,17 +98,15 @@ class InfoConfigurationWidget extends StatelessWidget {
                         "Добавить конфигурацию..",
                         style: TextStyle(
                           fontWeight: FontWeight.w400,
-                          fontSize: 12
+                          fontSize: 12,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 );
-              }
+              },
             ),
           ),
-          
-
 
           // Container(
           //   margin: EdgeInsets.only(bottom: 7, left: 15, right: 15),
