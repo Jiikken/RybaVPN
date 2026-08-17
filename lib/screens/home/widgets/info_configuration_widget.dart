@@ -15,11 +15,12 @@ class InfoConfigurationWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(15)
       ),
       width: double.infinity,
+      height: 155,
       margin: const EdgeInsets.only(bottom: 24),
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 16, top: 10),
+            margin: EdgeInsets.only(bottom: 6, top: 10),
             child: Text(
               "Конфигурации:",
               style: TextStyle(
@@ -27,6 +28,12 @@ class InfoConfigurationWidget extends StatelessWidget {
                 fontSize: 18
               ),
             ),
+          ),
+          Container(
+            width: 300,
+            height: 1,
+            color: greyBackgroundButton,
+            margin: EdgeInsets.only(bottom: 10),
           ),
           Container(
             margin: EdgeInsets.only(bottom: 7),
