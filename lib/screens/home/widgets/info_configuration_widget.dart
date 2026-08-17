@@ -35,94 +35,111 @@ class InfoConfigurationWidget extends StatelessWidget {
             color: greyBackgroundButton,
             margin: EdgeInsets.only(bottom: 10),
           ),
-          Container(
-            margin: EdgeInsets.only(bottom: 7),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: greyBackgroundStartButton,
-              border: Border.all(
-                color: green,
-                width: 1
-              )
-            ),
-            width: 337,
-            height: 41,
-            child: Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 7, right: 16),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.only(bottom: 7, left: 15, right: 15),
                   decoration: BoxDecoration(
-                    color: greyBackgroundButton.withValues(alpha: 0.5),
-                    shape: BoxShape.circle,
+                    borderRadius: BorderRadius.circular(15),
+                    color: greyBackgroundStartButton,
                     border: Border.all(
                       color: greyBackgroundButton,
                       width: 1
                     )
                   ),
-                  height: 31,
-                  width: 31,
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/images/green_check.svg',
-                      width: 20,
-                      height: 15,
-                    ),
+                  width: 337,
+                  height: 41,
+                  child: Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print("ПРИВЕТ!!!!");
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(left: 7, right: 16),
+                          decoration: BoxDecoration(
+                            color: greyBackgroundButton.withValues(alpha: 0.5),
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: greyBackgroundButton,
+                              width: 1
+                            )
+                          ),
+                          height: 31,
+                          width: 31,
+                          child: Center(
+                            child: SvgPicture.asset(
+                              'assets/images/add.svg',
+                              width: 24,
+                              height: 24,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Добавить конфигурацию..",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12
+                        ),
+                      )
+                    ],
                   ),
-                ),
-                Text(
-                  "Действующая конфигурация",
-                  style: TextStyle(
-                    fontFamily: "Rubik-Regular",
-                    fontSize: 12
-                  ),
-                )
-              ],
+                );
+              }
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(bottom: 7),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: greyBackgroundStartButton,
-              border: Border.all(
-                color: greyBackgroundButton,
-                width: 1
-              )
-            ),
-            width: 337,
-            height: 41,
-            child: Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 7, right: 16),
-                  decoration: BoxDecoration(
-                    color: greyBackgroundButton.withValues(alpha: 0.5),
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: greyBackgroundButton,
-                      width: 1
-                    )
-                  ),
-                  height: 31,
-                  width: 31,
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/images/add.svg',
-                      width: 24,
-                      height: 24,
-                    ),
-                  ),
-                ),
-                Text(
-                  "Добавить конфигурацию..",
-                  style: TextStyle(
-                    fontFamily: "Rubik-Regular",
-                    fontSize: 12
-                  ),
-                )
-              ],
-            ),
-          )
+          
+
+
+          // Container(
+          //   margin: EdgeInsets.only(bottom: 7, left: 15, right: 15),
+          //   decoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(15),
+          //     color: greyBackgroundStartButton,
+          //     border: Border.all(
+          //       color: green,
+          //       width: 1
+          //     )
+          //   ),
+          //   height: 40,
+          //   child: Row(
+          //     children: [
+          //       Container(
+          //         margin: EdgeInsets.only(left: 7, right: 16),
+          //         decoration: BoxDecoration(
+          //           color: greyBackgroundButton.withValues(alpha: 0.5),
+          //           shape: BoxShape.circle,
+          //           border: Border.all(
+          //             color: greyBackgroundButton,
+          //             width: 1
+          //           )
+          //         ),
+          //         height: 31,
+          //         width: 31,
+          //         child: Center(
+          //           child: SvgPicture.asset(
+          //             'assets/images/green_check.svg',
+          //             width: 20,
+          //             height: 15,
+          //           ),
+          //         ),
+          //       ),
+          //       Expanded(
+          //         child: Text(
+          //           "Действующая конфигурация",
+          //           style: TextStyle(
+          //             fontWeight: FontWeight.w400,
+          //             fontSize: 12,
+          //           ),
+          //           overflow: TextOverflow.ellipsis,
+          //         ),
+          //       )
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
