@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:trying_flutter/constants/constants.dart';
 
 class TopWidget extends StatelessWidget {
@@ -14,13 +15,20 @@ class TopWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
+            width: 38,
+            height: 38,
+            margin: const EdgeInsets.only(left: 14),
             decoration: BoxDecoration(
               color: greyBackgroundButtonTopSection.withValues(alpha: 0.5),
               shape: BoxShape.circle,
             ),
-            width: 38,
-            height: 38,
-            margin: EdgeInsets.only(left: 14),
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/images/repost.svg',
+                height: 24,
+                width: 24,
+              ),
+            ),
           ),
           Container(
             decoration: BoxDecoration(
@@ -45,13 +53,20 @@ class TopWidget extends StatelessWidget {
             ),
           ),
           Container(
+            width: 38,
+            height: 38,
+            margin: const EdgeInsets.only(right: 14),
             decoration: BoxDecoration(
               color: greyBackgroundButtonTopSection.withValues(alpha: 0.5),
               shape: BoxShape.circle,
             ),
-            width: 38,
-            height: 38,
-            margin: EdgeInsets.only(right: 14),
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/images/settings.svg',
+                height: 24,
+                width: 24,
+              ),
+            ),
           ),
         ],
         ),
