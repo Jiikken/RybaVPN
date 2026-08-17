@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: "Rubik",
+        scaffoldBackgroundColor: const Color(0xff1A1A1A),
         textTheme: TextTheme(
           displayLarge: TextStyle(color: white),
           displayMedium: TextStyle(color: white),
