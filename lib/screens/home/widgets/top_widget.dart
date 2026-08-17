@@ -24,7 +24,7 @@ class TopWidget extends StatelessWidget {
             ),
             child: Center(
               child: SvgPicture.asset(
-                'assets/images/repost.svg',
+                'assets/images/grey_repost.svg',
                 height: 24,
                 width: 24,
               ),
@@ -62,7 +62,7 @@ class TopWidget extends StatelessWidget {
             ),
             child: Center(
               child: SvgPicture.asset(
-                'assets/images/settings.svg',
+                'assets/images/grey_settings.svg',
                 height: 24,
                 width: 24,
               ),
