@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 Color blue = const Color(0xff82B3BF);
 
+Color green = const Color(0xff00BC22);
+
 Color greyText = const Color(0xff454545);
 Color greyBackground = const Color(0xff1A1A1A);
 Color greyBackgroundSection = const Color(0xff121212);
