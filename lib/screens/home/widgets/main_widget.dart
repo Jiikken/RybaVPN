@@ -15,7 +15,6 @@ class MainWidget extends StatelessWidget {
         color: const Color(0xff121212),
       ),
       width: double.infinity,
-      height: 460,
       margin: const EdgeInsets.only(bottom: 20),
       child: Column(
         children: [
@@ -63,12 +62,12 @@ class MainWidget extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-              color: greyBackgroundButtonTopSection.withValues(alpha: 0.5),
+              color: greyBackgroundStartButton.withValues(alpha: 0.5),
               shape: BoxShape.circle,
             ),
             height: 220,
             width: 220,
-            margin: EdgeInsets.only(top: 60, left: 74, right: 74),
+            margin: EdgeInsets.only(top: 60, left: 74, right: 74, bottom: 42),
             child: Center(
               child: SvgPicture.asset(
                 'assets/images/grey_start.svg',
