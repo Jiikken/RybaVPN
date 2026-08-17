@@ -16,27 +16,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Rubik",
         scaffoldBackgroundColor: const Color(0xff1A1A1A),
-        textTheme: TextTheme(
-          displayLarge: TextStyle(color: white),
-          displayMedium: TextStyle(color: white),
-          displaySmall: TextStyle(color: white),
-          headlineLarge: TextStyle(color: white),
-          headlineMedium: TextStyle(color: white),
-          headlineSmall: TextStyle(color: white),
-          titleLarge: TextStyle(color: white),
-          titleMedium: TextStyle(color: white),
-          titleSmall: TextStyle(color: white),
-          bodyLarge: TextStyle(color: white),
-          bodyMedium: TextStyle(color: white),
-          bodySmall: TextStyle(color: white),
-          labelLarge: TextStyle(color: white),
-          labelMedium: TextStyle(color: white),
-          labelSmall: TextStyle(color: white),
-        )
+        colorScheme: ColorScheme(
+          brightness: Brightness.light,
+          primary: white,
+          onPrimary: white,
+          secondary: white,
+          onSecondary: white,
+          error: Colors.red,
+          onError: Colors.red,
+          surface: greyBackgroundSection,
+          onSurface: white,
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
     );
   }
 }
-
