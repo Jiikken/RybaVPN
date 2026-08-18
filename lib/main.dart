@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xff1A1A1A),
         colorScheme: ColorScheme(
           brightness: Brightness.light,
-          primary: white,
+          primary: greyBackgroundButton,
           onPrimary: white,
           secondary: white,
           onSecondary: white,
