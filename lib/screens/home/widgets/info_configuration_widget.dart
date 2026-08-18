@@ -56,18 +56,34 @@ class InfoConfigurationWidget extends StatelessWidget {
                                   barBackgroundColor: greyBackgroundSection
                                 ),
                                 child: CupertinoAlertDialog(
-                                  title: Text("Add configuration"),
+                                  title: Text("Добавление конфигурации"),
                                   content: Column(
                                     children: [
-                                      Text("data1"),
-                                      Text("data2"),
+                                      const SizedBox(height: 10,),
+                                      CupertinoTextField(
+                                        placeholder: "Вставьте ссылку..",
+                                      ),
+                                      const SizedBox(height: 20,),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          TextButton(
+                                            onPressed:() {}, 
+                                            child: Text(
+                                              "Отменить",
+                                              style: TextStyle(
+                                                color: white
+                                              ),
+                                            ),
+                                          ),
+                                          FilledButton(
+                                            onPressed:() {},
+                                            child: Text("Добавить")
+                                          )
+                                        ],
+                                      ),
                                     ],
                                   ),
-                                  actions: [
-                                    TextButton(onPressed:() {
-                                      
-                                    }, child: Text("Cancel"))
-                                  ],
                                 ),
                               );
                             },
